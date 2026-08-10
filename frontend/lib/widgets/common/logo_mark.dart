@@ -29,9 +29,9 @@ class LogoMark extends StatelessWidget {
         borderRadius: BorderRadius.circular(size * 0.3),
         boxShadow: [
           BoxShadow(
-            color: AppColors.primary.withValues(alpha: 0.45),
-            blurRadius: size * 0.5,
-            offset: Offset(0, size * 0.12),
+            color: AppColors.primary.withValues(alpha: 0.32),
+            blurRadius: size * 0.42,
+            offset: Offset(0, size * 0.1),
           ),
         ],
       ),

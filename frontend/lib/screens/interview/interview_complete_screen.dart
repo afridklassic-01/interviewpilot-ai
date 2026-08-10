@@ -346,12 +346,12 @@ class _CompleteBadge extends StatelessWidget {
       width: 56,
       height: 56,
       decoration: BoxDecoration(
-        gradient: AppColors.successGradient,
+        gradient: AppColors.brandGradient,
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
-            color: AppColors.success.withValues(alpha: 0.4),
-            blurRadius: 28,
+            color: AppColors.primary.withValues(alpha: 0.3),
+            blurRadius: 22,
             offset: const Offset(0, 4),
           ),
         ],

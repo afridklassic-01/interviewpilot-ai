@@ -48,7 +48,7 @@ class AppTokens {
 
   static List<BoxShadow> get glowShadow => const [
         BoxShadow(
-          color: Color(0x557C6CFF),
+          color: Color(0x446366F1),
           blurRadius: 32,
           offset: Offset(0, 4),
         ),
@@ -85,9 +85,9 @@ class AppDecor {
       border: Border.all(color: AppColors.borderStrong),
       boxShadow: [
         const BoxShadow(
-          color: Color(0x337C6CFF),
-          blurRadius: 28,
-          offset: Offset(0, 10),
+          color: Color(0x336366F1),
+          blurRadius: 24,
+          offset: Offset(0, 8),
         ),
         AppTokens.cardShadow.first,
       ],

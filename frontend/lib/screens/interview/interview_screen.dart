@@ -551,7 +551,7 @@ class _InterviewTopBar extends StatelessWidget {
       height: AppTokens.navHeight,
       padding: const EdgeInsets.symmetric(horizontal: AppTokens.s6),
       decoration: const BoxDecoration(
-        color: Color(0x6606080F),
+        color: Color(0x66070B14),
         border: Border(bottom: BorderSide(color: AppColors.borderFaint)),
       ),
       child: ListenableBuilder(
@@ -621,7 +621,7 @@ class _InterviewTopBar extends StatelessWidget {
                           question.topic,
                           tone: question.isFollowUp
                               ? PilotTone.accent
-                              : PilotTone.neutral,
+                              : PilotTone.info,
                           icon: question.isFollowUp
                               ? Icons.auto_awesome_rounded
                               : Icons.category_outlined,
@@ -630,7 +630,7 @@ class _InterviewTopBar extends StatelessWidget {
                         if (MediaQuery.of(context).size.width >= 560) ...[
                           PilotChip(
                             question.difficulty.label,
-                            tone: PilotTone.warning,
+                            tone: PilotTone.primary,
                             icon: Icons.trending_up_rounded,
                           ),
                           const SizedBox(width: AppTokens.s3),
@@ -645,7 +645,7 @@ class _InterviewTopBar extends StatelessWidget {
                         icon: const Icon(
                           Icons.logout_rounded,
                           size: 18,
-                          color: AppColors.textMuted,
+                          color: AppColors.danger,
                         ),
                       ),
                     ],

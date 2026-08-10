@@ -30,6 +30,7 @@ class QuestionCard extends StatelessWidget {
     return AppCard(
       hoverable: false,
       radius: AppTokens.r5 + 2,
+      borderColor: AppColors.primary.withValues(alpha: 0.35),
       gradient: isFollowUp
           ? LinearGradient(
               begin: Alignment.topLeft,
@@ -71,7 +72,7 @@ class QuestionCard extends StatelessWidget {
               ),
               PilotChip(
                 question.topic,
-                tone: isFollowUp ? PilotTone.accent : PilotTone.neutral,
+                tone: isFollowUp ? PilotTone.accent : PilotTone.info,
                 icon: isFollowUp
                     ? Icons.auto_awesome_rounded
                     : Icons.category_outlined,

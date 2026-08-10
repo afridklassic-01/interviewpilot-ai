@@ -1,7 +1,7 @@
 /// Central configuration for backend connectivity.
 ///
 /// SECURITY:
-/// The Hugging Face API token NEVER lives inside Flutter.
+/// The API token NEVER lives inside Flutter.
 /// It stays inside the FastAPI backend's .env file.
 ///
 /// Flutter only communicates with the FastAPI backend over HTTP REST.
@@ -12,24 +12,15 @@ class ApiConfig {
   // BACKEND URL
   // ============================================================
 
-  /// FastAPI backend URL.
-  ///
-  /// Local development:
-  /// http://127.0.0.1:8000
-  ///
-  /// For deployment, use:
-  /// --dart-define=API_BASE_URL=https://your-api-domain.com
   static const String baseUrl = String.fromEnvironment(
     'API_BASE_URL',
-    defaultValue: 'http://127.0.0.1:8000',
+    defaultValue: 'https://interviewpilot-ai-3zl3.onrender.com',
   );
 
   // ============================================================
   // BACKEND MODE
   // ============================================================
 
-  /// false = use real FastAPI backend
-  /// true  = use Flutter mock backend
   static const bool useMockBackend = bool.fromEnvironment(
     'USE_MOCK_BACKEND',
     defaultValue: false,
@@ -39,10 +30,6 @@ class ApiConfig {
   // NETWORK SETTINGS
   // ============================================================
 
-  /// Maximum time allowed for a backend request.
-  ///
-  /// Kept generous: the evaluator prompt is long and Hugging Face
-  /// inference can take 20-45s per answer.
   static const Duration networkTimeout = Duration(
     seconds: 45,
   );
@@ -51,18 +38,10 @@ class ApiConfig {
   // INTERVIEW ENDPOINTS
   // ============================================================
 
-  /// Start a new interview.
-  ///
-  /// POST:
-  /// http://127.0.0.1:8000/api/interview/start
   static String get interviewStartPath {
     return '/api/interview/start';
   }
 
-  /// Submit candidate answer.
-  ///
-  /// POST:
-  /// http://127.0.0.1:8000/api/interview/answer
   static String get interviewAnswerPath {
     return '/api/interview/answer';
   }
@@ -95,15 +74,6 @@ class ApiConfig {
   // URL BUILDER
   // ============================================================
 
-  /// Converts an endpoint path into a complete URL.
-  ///
-  /// Example:
-  ///
-  /// resolve('/api/interview/start')
-  ///
-  /// becomes:
-  ///
-  /// http://127.0.0.1:8000/api/interview/start
   static String resolve(String path) {
     return '$baseUrl$path';
   }

@@ -14,6 +14,7 @@ class AppCard extends StatefulWidget {
     this.radius = AppTokens.r5,
     this.gradient,
     this.color,
+    this.borderColor,
   });
 
   final Widget child;
@@ -23,6 +24,9 @@ class AppCard extends StatefulWidget {
   final double radius;
   final Gradient? gradient;
   final Color? color;
+
+  /// Overrides the default card border color (e.g. a subtle accent border).
+  final Color? borderColor;
 
   @override
   State<AppCard> createState() => _AppCardState();
@@ -40,14 +44,16 @@ class _AppCardState extends State<AppCard> {
       gradient: widget.gradient,
       borderRadius: BorderRadius.circular(widget.radius),
       border: Border.all(
-        color: elevated ? AppColors.primary.withValues(alpha: 0.35) : AppColors.border,
+        color: elevated
+            ? AppColors.primary.withValues(alpha: 0.5)
+            : (widget.borderColor ?? AppColors.border),
       ),
       boxShadow: elevated
           ? [
               BoxShadow(
-                color: AppColors.primary.withValues(alpha: 0.14),
-                blurRadius: 30,
-                offset: const Offset(0, 10),
+                color: AppColors.primary.withValues(alpha: 0.09),
+                blurRadius: 22,
+                offset: const Offset(0, 8),
               ),
               ...AppTokens.cardShadow,
             ]

@@ -32,6 +32,7 @@ class LearningContextPanel extends StatelessWidget {
         const SizedBox(height: AppTokens.s3),
         AppCard(
           padding: const EdgeInsets.all(AppTokens.s4),
+          borderColor: AppColors.primary.withValues(alpha: 0.28),
           gradient: isFollowUp
               ? LinearGradient(
                   colors: [
@@ -134,6 +135,7 @@ class LearningContextPanel extends StatelessWidget {
         AppCard(
           padding: const EdgeInsets.all(AppTokens.s4),
           hoverable: false,
+          borderColor: AppColors.primary.withValues(alpha: 0.28),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -145,9 +147,7 @@ class LearningContextPanel extends StatelessWidget {
                   const SizedBox(width: AppTokens.s2),
                   PilotChip(
                     question.difficulty.label,
-                    tone: question.difficulty == Difficulty.staff
-                        ? PilotTone.warning
-                        : PilotTone.primary,
+                    tone: PilotTone.primary,
                     icon: Icons.trending_up_rounded,
                   ),
                 ],

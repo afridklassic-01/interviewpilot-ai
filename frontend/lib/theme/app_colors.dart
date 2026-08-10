@@ -2,57 +2,57 @@ import 'package:flutter/material.dart';
 
 /// Central color palette for InterviewPilot AI.
 ///
-/// A sophisticated dark, developer-tool aesthetic:
-/// deep ink backgrounds, iris/violet primary, cyan secondary,
-/// emerald success and soft amber warning accents.
+/// A professional, modern AI/SaaS dark theme: deep navy backgrounds,
+/// charcoal/slate cards, indigo + blue accents with a violet highlight,
+/// muted slate text, and red reserved for destructive actions.
+/// Green survives only as a semantic success indicator.
 class AppColors {
   AppColors._();
 
   // ---- Surfaces ----------------------------------------------------------
-  static const Color ink = Color(0xFF06080F); // App background (deepest)
-  static const Color inkSoft = Color(0xFF0A0E18); // Secondary background
-  static const Color surface = Color(0xFF111624); // Card surface
-  static const Color surfaceRaised = Color(0xFF182031); // Elevated surface
-  static const Color surfaceSunken = Color(0xFF0C101C); // Input / well
+  static const Color ink = Color(0xFF070B14); // App background (deepest)
+  static const Color inkSoft = Color(0xFF0B1020); // Secondary background
+  static const Color surface = Color(0xFF111827); // Card surface
+  static const Color surfaceRaised = Color(0xFF151B2B); // Elevated surface
+  static const Color surfaceSunken = Color(0xFF0D1320); // Input / well
 
   // ---- Borders -----------------------------------------------------------
-  static const Color border = Color(0x14FFFFFF); // 8% white
+  static const Color border = Color(0xFF263047); // Subtle 1px card border
   static const Color borderStrong = Color(0x26FFFFFF); // 15% white
   static const Color borderFaint = Color(0x0DFFFFFF); // 5% white
 
   // ---- Brand -------------------------------------------------------------
-  static const Color primary = Color(0xFF7C6CFF); // Iris
-  static const Color primaryBright = Color(0xFF9E8FFF); // Iris highlight
-  static const Color primaryDeep = Color(0xFF5546E8); // Iris deep
-  static const Color secondary = Color(0xFF2DD4BF); // Teal / cyan
-  static const Color secondaryDim = Color(0xFF0E7C6F);
+  static const Color primary = Color(0xFF6366F1); // Indigo accent
+  static const Color primaryBright = Color(0xFF818CF8); // Indigo highlight
+  static const Color primaryDeep = Color(0xFF4F46E5); // Indigo deep
+  static const Color secondary = Color(0xFF3B82F6); // Blue accent
+  static const Color secondaryDim = Color(0xFF1E40AF);
+  static const Color highlight = Color(0xFF8B5CF6); // Violet highlight
 
   // ---- Text --------------------------------------------------------------
-  static const Color textPrimary = Color(0xFFF1F3FA);
-  static const Color textSecondary = Color(0xFF9AA3B8);
-  static const Color textMuted = Color(0xFF5F6B84);
+  static const Color textPrimary = Color(0xFFF8FAFC);
+  static const Color textSecondary = Color(0xFF94A3B8);
+  static const Color textMuted = Color(0xFF64748B);
 
   // ---- Status ------------------------------------------------------------
-  static const Color success = Color(0xFF4ADE9C);
+  static const Color success = Color(0xFF34D399); // Semantic — positive only
   static const Color warning = Color(0xFFF5B95C);
-  static const Color danger = Color(0xFFF2737F);
+  static const Color danger = Color(0xFFEF4444); // Destructive actions only
   static const Color info = Color(0xFF63B3F8);
 
   // ---- Gradient defs -----------------------------------------------------
+  /// Brand: violet → indigo → deep indigo (logos, primary buttons, avatars).
   static const LinearGradient brandGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [Color(0xFF8B7BFF), Color(0xFF5A4BE8), Color(0xFF3E31C4)],
+    colors: [Color(0xFF8B5CF6), Color(0xFF6366F1), Color(0xFF4F46E5)],
   );
 
+  /// Signal/score bars: indigo → blue.
   static const LinearGradient signalGradient = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
-    colors: [Color(0xFF7C6CFF), Color(0xFF2DD4BF)],
-  );
-
-  static const LinearGradient successGradient = LinearGradient(
-    colors: [Color(0xFF3DDC97), Color(0xFF1FA97C)],
+    colors: [Color(0xFF818CF8), Color(0xFF3B82F6)],
   );
 
   static const LinearGradient warningGradient = LinearGradient(
@@ -60,7 +60,7 @@ class AppColors {
   );
 
   static const LinearGradient dangerGradient = LinearGradient(
-    colors: [Color(0xFFF2737F), Color(0xFFC0525E)],
+    colors: [Color(0xFFEF4444), Color(0xFFDC2626)],
   );
 
   /// Glass-like card fill: subtle white overlay from the top.

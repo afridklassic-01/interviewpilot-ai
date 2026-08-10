@@ -97,10 +97,10 @@ class _AppButtonState extends State<AppButton> {
               ? [
                   BoxShadow(
                     color: isPrimary
-                        ? AppColors.primary.withValues(alpha: 0.35)
-                        : AppColors.primary.withValues(alpha: 0.18),
-                    blurRadius: 22,
-                    offset: const Offset(0, 6),
+                        ? AppColors.primary.withValues(alpha: 0.22)
+                        : AppColors.primary.withValues(alpha: 0.14),
+                    blurRadius: 18,
+                    offset: const Offset(0, 4),
                   ),
                 ]
               : null,

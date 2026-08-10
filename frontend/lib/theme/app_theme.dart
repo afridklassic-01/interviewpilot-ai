@@ -31,7 +31,7 @@ class AppTheme {
       dividerColor: AppColors.border,
       textSelectionTheme: const TextSelectionThemeData(
         cursorColor: AppColors.primaryBright,
-        selectionColor: Color(0x557C6CFF),
+        selectionColor: Color(0x556366F1),
         selectionHandleColor: AppColors.primaryBright,
       ),
       inputDecorationTheme: InputDecorationTheme(

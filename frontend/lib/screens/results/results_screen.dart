@@ -474,7 +474,7 @@ class _StrengthCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       gradient: LinearGradient(
-        colors: [AppColors.success.withValues(alpha: 0.08), AppColors.surface],
+        colors: [AppColors.primary.withValues(alpha: 0.07), AppColors.surface],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
